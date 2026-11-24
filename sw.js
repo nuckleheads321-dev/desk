@@ -1,5 +1,5 @@
-/* Desk HF offline SW · rev d10x-pages-1111 · soft only */
-const C="desk-hf-d10x-pages-1111";
+/* Desk HF offline SW · rev d10x-pages-1119 · soft only */
+const C="desk-hf-d10x-pages-1119";
 self.addEventListener("install",e=>self.skipWaiting());
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("desk-hf-")&&k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",e=>{
